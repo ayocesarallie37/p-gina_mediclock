@@ -12,7 +12,7 @@
 
     if(mysqli_num_rows($validar_login) > 0){
         $_SESSION["user"] = $contrasena;
-        header("location: ../inicio.php");
+        header("location: ../index.php");
         exit;
     }else{
         echo '

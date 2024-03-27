@@ -1,0 +1,492 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans&family=Young+Serif&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: "Poppins", sans-serif;
+}
+
+.h1 {
+    display: inline;
+    padding: 20px;
+    margin-top: 50px;
+}
+
+.img {
+    margin: 13%;
+    width: 400px;
+    height: 800px;
+    position: relative;
+    left: -300px;
+    top: 150px;
+}
+
+header{
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    height: 80px;
+    background: white;
+    box-shadow: 0 4px 25px -22px black;
+    z-index: 2;
+}
+
+.header-content {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    width: 200px; /* Ajusta el tamaño según tu diseño */
+    margin-left: 0px;
+}
+
+
+.logo h1 b{
+    color: #4630ab;
+    font-size: 30px;
+}
+
+.menu{
+    height: 80px;
+}
+
+.menu nav{
+    height: 100%;
+}
+
+.menu nav ul{
+    height: 100%;
+    display: flex;
+    list-style: none;
+}
+
+.menu nav ul li{
+    height: 100%;
+    margin: 0px 20px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    border-radius: 10px; /* Agregamos esquinas redondeadas */
+    overflow: hidden; /* Para asegurar que las esquinas redondeadas se apliquen correctamente */
+
+}
+
+.menu-select:before {
+content: '';
+width: 100%;
+height: 4px;
+background: white;
+position: absolute;
+top:0;
+left: 0;
+}
+
+.menu nav ul li a {
+background: #4630ab;
+color:white;
+font-size: 17px;
+transition: background 300ms, color 300ms;
+padding: 10px 18px; /* Espaciado interno para hacerlo más rectangular */
+display: block;
+border-radius: .5rem;
+}
+
+.menu nav ul li a:hover{
+    background: #2b0548; /* Cambiamos el color de fondo al pasar el cursor */
+    color: white; /* Cambiamos el color del texto al pasar el cursor */
+}
+
+menu .text-menu-selected {
+    color: white;
+}
+
+.menu  nav ul li a i{
+    display: none;
+}
+
+#icon-menu{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 20px;
+    top: 16px;
+    padding: 10px;
+    font-size: 20px;
+    background: #eeeafa;
+    border-radius: 100%;
+    color: #787878;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+#icon-menu:hover{
+    opacity: 0.8;
+}
+
+
+/*Responsive desing*/
+
+@media screen and (max-width:1220px){
+    .header-content{
+        max-width: 1000px;
+        padding: 0 20px;
+    }
+}
+
+@media screen and (max-width:1020px){
+    .container-content{
+        width: 100%;
+        flex-direction: column;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    body{
+        overflow-x: hidden;
+    }
+
+    .menu{
+        width: 0px;
+        height: 100vh;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        background: #fff;
+        overflow: hidden;
+        transform: translateX(-350px);
+        box-shadow: 10px 0 20px -25px black;
+        transition: all 300ms cubic-bezier(1,0,0,1);
+    }
+
+    .show-lateral{
+        width: 300px;
+        transform: translateX(0px);
+    }
+
+    .menu nav ul {
+        flex-direction: column;
+    }
+
+    .menu nav ul li{
+        max-width: 200px;
+        height: 50px;
+        justify-content: flex-start;
+        padding: 10px 20px 40px;
+    }
+    .menu-selected:before {
+        width: 0;
+    }
+    .menu nav ul li a {
+    margin-top: 40px;
+    color: #ffffff;
+    }
+   #icon-menu{
+    display: flex;
+   }
+}
+
+.container-cover{
+    width: 100%;
+    height: 500px;
+    position: relative;
+    margin-top: 80px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.container-cover:before{
+    content: '';
+    width: 100%;
+    height: 100%;
+    background: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.container-info-cover{
+    max-width: 750px;
+    height: 400px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 1;
+    margin-left: 20px;
+}
+
+.container-info-cover h1{
+    font-size: 60px;
+    font-weight: 20px;
+    color: rgb(0, 0, 0);
+    margin-bottom: 20px;
+}
+
+.container-info-cover p{
+    color: rgb(0, 0, 0);
+    font-size: 20px;
+    font-weight: 300px;
+}
+
+.imagen{
+    width: 40%;
+    height: 500px;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+
+.imagen img{
+    width: 400px;
+    height: 500px;
+    object-fit: cover;
+    margin-top: -120px;
+}
+
+:root {
+--primary: #000000;
+}
+
+
+.background {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    padding: 80px 32px;
+}
+
+.articles {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    justify-content: center;
+    max-width: 1500px;
+    gap: 24px;
+}
+
+.articles article {
+max-width: 320px;
+cursor: pointer;
+display: block;
+transition: all 0.4s ease-in-out;
+overflow: hidden;
+border-radius: 16px;
+}
+
+.articles article a {
+    display: inline-flex;
+    color: var(--primary);
+    text-decoration: none;
+}
+.articles article h2 {
+    margin: 0 0 18px 0;
+    font-size: 1.6rem;
+    color: var(--seconfary);
+    transition: color 0.3s ease-out;
+}
+
+.articles article img {
+    max-width: 100%;
+    transform-origin: center;
+transition: transform 0.4s ease-in-out;
+}
+
+.article-preview {
+padding: 24px;
+background: white;
+}
+
+.articles figure {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+}
+
+.articles figure img {
+    height: 100%;
+    aspect-ratio: 16/9;
+    overflow: hidden;
+    object-fit: cover;
+}
+
+.articles article:hover img{
+    transform: scale(1.5);
+}
+
+
+
+.titulo {
+    text-align: center;
+    font-size: 34px;
+    font-family:'Source Sans Pro', sans-serif;
+    color: #ffffff;
+}
+
+/* Comienza el estilo para el footer */
+
+.container-footer{
+    width: 100%;
+    padding: 40px 0;
+    background: rgb(255, 255, 255);
+    margin-top: 40px;  
+}
+
+.container-footer footer{
+    max-width: 1200px;
+    margin: auto;
+}
+
+.container-footer footer .logo-footer{
+    text-align: center;
+}
+
+.container-footer footer .logo-footer img {
+    width: 100px;
+
+}
+.container-footer footer .redes-footer{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.container-footer footer .redes-footer .icon-redes-footer{
+    font-size: 20px;
+    margin: 20px;
+    background: #a9abde;
+    width: 50px;
+    height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 100px;
+    color: #ffffff;
+}
+
+
+footer .redes-footer .fa-facebook-f:hover{
+    background:linear-gradient(to  top right, #2b0548, #4630ab, #6669c5);
+    color: #ffffff;
+}
+footer .redes-footer .fa-google-plus-g:hover{
+    background:linear-gradient(to  top right, #2b0548, #4630ab, #6669c5);
+    color: #ffffff;
+}
+footer .redes-footer .fa-instagram:hover{
+    background:linear-gradient(to  top right, #2b0548, #4630ab, #6669c5);
+    color: #ffffff;
+}
+
+footer .redes-footer .fa-x-twitter:hover{
+    background:linear-gradient(to  top right, #2b0548, #4630ab, #6669c5);
+    color: #ffffff;
+}
+.container-footer footer hr{
+    margin-top: 20px;
+    border: none;
+    height: 2px;
+    background: #4630ab;
+}
+
+.container-footer h4{
+    text-align: center;
+    margin-top: 40px;
+    color: #6669c5;
+    font-weight: 500;
+}
+
+/* Termina footer */
+
+
+
+/*Aqui inicia contenedor blac box*/
+
+.contenedor {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 20px;
+        }
+
+        .texto {
+            max-width: 400px;
+        }
+        .texto h1 {
+            font-size: 24px;
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .texto p {
+            font-size: 16px;
+            color: #666;
+        }
+        .imagen {
+            max-width: 300px;
+            height: auto;
+        }
+
+@media screen and (max-width: 768px) {
+    .container-cover {
+        height: 300px; /* Reducir la altura en dispositivos móviles */
+        margin-top: 20px; /* Ajustar el margen superior */
+        background-size: contain; /* Cambiar tamaño de fondo */
+    }
+
+    .container-info-cover {
+        max-width: 90%; /* Reducir el ancho máximo */
+        height: auto; /* Ajustar la altura automáticamente */
+        margin: 20px auto; /* Modificar los márgenes */
+        text-align: left; /* Alinear texto a la izquierda */
+        padding: 20px; /* Añadir relleno */
+    }
+
+    .container-info-cover h1 {
+        font-size: 30px; /* Reducir tamaño del título */
+        margin-bottom: 10px; /* Ajustar margen inferior */
+    }
+
+    .container-info-cover p {
+        font-size: 16px; /* Reducir tamaño del texto */
+    }
+
+    .imagen {
+        display: none; /* Ocultar la imagen en dispositivos móviles */
+    }
+
+    .articles {
+        padding: 20px; /* Ajustar el relleno */
+        gap: 10px; /* Reducir el espacio entre los elementos */
+    }
+
+    .articles article {
+        max-width: 100%; /* Utilizar todo el ancho disponible */
+        margin-bottom: 20px; /* Ajustar margen inferior */
+    }
+
+    .articles article img {
+        width: 100%; /* Ajustar el ancho de las imágenes */
+        height: auto; /* Permitir ajuste de altura */
+    }
+
+    .article-preview {
+        padding: 10px; /* Reducir el relleno */
+    }
+}
